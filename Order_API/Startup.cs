@@ -36,10 +36,16 @@ namespace Order_API
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { 
-                    Title = "Order_API", 
+                c.SwaggerDoc("CustomerOpenAPI", new OpenApiInfo { 
+                    Title = "Customers_API", 
                     Version = "v1", 
-                    Description = "Simple Order Application"
+                    Description = "Moving Masters Application"
+                });
+                c.SwaggerDoc("OrderOpenAPI", new OpenApiInfo
+                {
+                    Title = "Orders_API",
+                    Version = "v1",
+                    Description = "Moving Masters Application"
                 });
                 //This gives us xml comments file
                 var xmlCommentFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
@@ -56,7 +62,8 @@ namespace Order_API
                 app.UseDeveloperExceptionPage();
                 app.UseSwagger();
                 app.UseSwaggerUI(c => {
-                    c.SwaggerEndpoint("/swagger/v1/swagger.json", "Order_API v1");
+                    c.SwaggerEndpoint("/swagger/CustomerOpenAPI/swagger.json", "Customer API");
+                    c.SwaggerEndpoint("/swagger/OrderOpenAPI/swagger.json", "Order API");
                     c.RoutePrefix = "";
                     });
 

@@ -11,6 +11,7 @@ namespace Order_API.Controllers
     [Route("api/[controller]")]
     [ApiController]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
+    [ApiExplorerSettings(GroupName = "CustomerOpenAPI")]
     public class CustomerController : Controller
     {
         private readonly ICustomerRepo _customerRepo;
