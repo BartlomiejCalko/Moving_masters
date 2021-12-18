@@ -31,6 +31,7 @@ namespace Order_API
             services.AddDbContext<ApplicationDbContext>
                 (options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
             services.AddScoped<ICustomerRepo, CustomerRepo>();
+            services.AddScoped<IOrderRepo, OrderRepo>();
             services.AddAutoMapper(typeof(CustomerMapper));
             services.AddControllers();
             services.AddSwaggerGen(c =>

@@ -17,5 +17,18 @@
             <param name="customerId">Id of customer</param>
             <returns></returns>
         </member>
+        <member name="M:Order_API.Controllers.OrderController.GetOrders">
+            <summary>
+            Get list of orders
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Order_API.Controllers.OrderController.GetOrderById(System.Int32)">
+            <summary>
+            Get order by Id
+            </summary>
+            <param name="orderId">Id of order</param>
+            <returns></returns>
+        </member>
     </members>
 </doc>

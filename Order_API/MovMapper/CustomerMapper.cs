@@ -9,6 +9,9 @@ namespace Order_API.MovMapper
         public CustomerMapper()
         {
             CreateMap<Customer, CustomerDto>().ReverseMap();
+            CreateMap<Order, OrderDto>().ReverseMap();
+            CreateMap<Order, OrderUpdateDto>().ReverseMap();
+            CreateMap<Order, OrderCreateDto>().ReverseMap();
         }
          
     }

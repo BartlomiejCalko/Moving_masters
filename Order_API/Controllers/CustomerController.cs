@@ -10,6 +10,7 @@ namespace Order_API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [ProducesResponseType(StatusCodes.Status400BadRequest)]
     public class CustomerController : Controller
     {
         private readonly ICustomerRepo _customerRepo;
@@ -71,7 +72,7 @@ namespace Order_API.Controllers
             {
                 return BadRequest(ModelState);
             }
-            if (_customerRepo.CustomerExists(customerDto.LastName))
+            if (_customerRepo.CustomerExists(customerDto.Phone))
             {
                 ModelState.AddModelError("", "Customer with this phone number exists!");
                 return StatusCode(404, ModelState);
@@ -92,6 +93,9 @@ namespace Order_API.Controllers
         }
 
         [HttpPatch("{customerId:int}", Name = "UpdateCustomer")]
+        [ProducesResponseType(204)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         public IActionResult UpdateCustomer(int customerId, [FromBody] CustomerDto customerDto)
         {
             if (customerDto == null || customerId!=customerDto.Id)
@@ -109,6 +113,10 @@ namespace Order_API.Controllers
         }
 
         [HttpDelete("{customerId:int}", Name = "DeleteCustomer")]
+        [ProducesResponseType(StatusCodes.Status204NoContent)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        [ProducesResponseType(StatusCodes.Status409Conflict)]
+        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         public IActionResult DeleteCustomer(int customerId)
         {
             if (!_customerRepo.CustomerExists(customerId))
