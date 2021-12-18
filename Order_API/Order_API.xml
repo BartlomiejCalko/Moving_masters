@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Order_API</name>
+    </assembly>
+    <members>
+        <member name="M:Order_API.Controllers.CustomerController.GetCustomers">
+            <summary>
+            Get list of customers
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Order_API.Controllers.CustomerController.GetCustomerById(System.Int32)">
+            <summary>
+            Get customer by Id
+            </summary>
+            <param name="customerId">Id of customer</param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
