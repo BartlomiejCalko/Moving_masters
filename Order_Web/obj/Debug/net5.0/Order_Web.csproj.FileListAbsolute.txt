@@ -355,3 +355,6 @@ D:\Moving_masters\Moving_masters\Order_Web\bin\Debug\net5.0\tr\Microsoft.CodeAna
 D:\Moving_masters\Moving_masters\Order_Web\bin\Debug\net5.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll
 D:\Moving_masters\Moving_masters\Order_Web\bin\Debug\net5.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
 D:\Moving_masters\Moving_masters\Order_Web\obj\Debug\net5.0\Order_Web.MvcApplicationPartsAssemblyInfo.cs
+D:\Moving_masters\Moving_masters\Order_Web\bin\Debug\net5.0\Newtonsoft.Json.dll
+D:\Moving_masters\Moving_masters\Order_Web\obj\Debug\net5.0\Razor\Views\Customer\Index.cshtml.g.cs
+D:\Moving_masters\Moving_masters\Order_Web\obj\Debug\net5.0\Razor\Views\Customer\Upsert.cshtml.g.cs

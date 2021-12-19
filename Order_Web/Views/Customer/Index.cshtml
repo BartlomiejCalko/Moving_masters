@@ -1,0 +1,31 @@
+﻿<div class="p-4" style="border-radius:20px;">
+    <div class="row">
+        <div class="col-6">
+            <h2 class="text-info">Customer List</h2>
+        </div>
+        <div class="col-6 text-right">
+            <a asp-action="Upsert" class="btn btn-info text-white"><i class="fas fa-plus"></i> &nbsp; Create New Customer</a>
+        </div>
+    </div>
+    <br />
+    <br />
+    <div style="background-color:white" class="p-3 rounded">
+        <table id="tblData" class="table table-bordered" style="width:100%">
+            <thead>
+                <tr class="table-info text-white">
+                    <th>First name</th>
+                    <th>Last name</th>
+                    <th>Address</th>
+                    <th></th>
+                </tr>
+            </thead>
+        </table>
+    </div>
+</div>
+
+@section Scripts {
+
+<script src="~/js/customer.js"></script>
+
+}
+

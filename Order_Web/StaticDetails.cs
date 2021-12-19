@@ -8,7 +8,7 @@ namespace Order_Web
     public static class StaticDetails
     {
         public static string APIBaseUrl = "https://localhost:44397/";
-        public static string CustomerAPIPath = APIBaseUrl + "api/Customer";
-        public static string OrderAPIPath = APIBaseUrl + "api/Order";
+        public static string CustomerAPIPath = APIBaseUrl + "api/Customer/";
+        public static string OrderAPIPath = APIBaseUrl + "api/Order/";
     }
 }
